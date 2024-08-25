@@ -7,7 +7,7 @@ export default eventHandler(async () => {
   );
 
   const { results } = await db
-    .prepare("SELECT * FROM messages ORDER BY created_at DESC")
+    .prepare("SELECT * FROM message ORDER BY created_at DESC")
     .all();
 
   return results;
